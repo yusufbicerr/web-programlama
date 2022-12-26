@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using WebProgramlamaProje.Models.Siniflar;
 
 namespace WebProgramlamaProje.Controllers
 {

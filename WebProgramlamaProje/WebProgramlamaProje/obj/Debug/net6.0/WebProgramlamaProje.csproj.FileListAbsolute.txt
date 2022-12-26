@@ -1,0 +1,8 @@
+C:\Users\Yasem\OneDrive\Masaüstü\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\net6.0\WebProgramlamaProje.csproj.AssemblyReference.cache
+C:\Users\Yasem\OneDrive\Masaüstü\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\net6.0\WebProgramlamaProje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yasem\OneDrive\Masaüstü\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\net6.0\WebProgramlamaProje.AssemblyInfoInputs.cache
+C:\Users\Yasem\OneDrive\Masaüstü\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\net6.0\WebProgramlamaProje.AssemblyInfo.cs
+C:\Users\Yasem\OneDrive\Masaüstü\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\net6.0\WebProgramlamaProje.csproj.CoreCompileInputs.cache
+C:\Users\Yasem\OneDrive\Masaüstü\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\net6.0\WebProgramlamaProje.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Yasem\OneDrive\Masaüstü\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\net6.0\WebProgramlamaProje.RazorAssemblyInfo.cache
+C:\Users\Yasem\OneDrive\Masaüstü\WebProgramlamaProje\WebProgramlamaProje\obj\Debug\net6.0\WebProgramlamaProje.RazorAssemblyInfo.cs
