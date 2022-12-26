@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Alertler\" />
+    <Folder Include="Views\Cari\" />
+    <Folder Include="Views\CariPanel\" />
+    <Folder Include="Views\Departman\" />
+    <Folder Include="Views\Error\" />
+    <Folder Include="Views\Fatura\" />
+    <Folder Include="Views\Galeri\" />
+    <Folder Include="Views\Istatistik\" />
+    <Folder Include="Views\Kargo\" />
+    <Folder Include="Views\Kategori\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\YetkisizIslem\" />
+    <Folder Include="Views\Urun\" />
+    <Folder Include="Views\Satis\" />
+    <Folder Include="Views\QE\" />
+    <Folder Include="Views\Personel\" />
+  </ItemGroup>
+
+</Project>
