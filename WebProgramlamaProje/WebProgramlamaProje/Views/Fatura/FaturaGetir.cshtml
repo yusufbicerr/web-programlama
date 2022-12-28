@@ -1,0 +1,38 @@
+﻿@model WebProgramlamaProje.Models.Siniflar.Faturalar
+
+@{
+    ViewBag.Title = "FaturaGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Fatura Güncelleme İşlemleri</h2>
+<br />
+
+@using (Html.BeginForm("FaturaGuncelle", "Fatura", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Faturalarid)
+    <p>F. Seri No</p>
+    @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
+    <br />
+    <p>F. Sıra No</p>
+    @Html.TextBoxFor(x => x.FaturaSiraNo, new { @class = "form-control" })
+    <br />
+    <p>Vergi Dairesi</p>
+    @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control" })
+    <br />
+    <p>Satış Tarihi</p>
+    @*@Html.DropDownListFor(x => x.Tarih, (List<SelectListItem>)ViewBag.deneme, new { @class = "form-control",@type="date" })*@
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control", @type = "date", @value=TempData["Date"]  })
+    <br />
+    <p>İşlem Saati</p>
+    @Html.TextBoxFor(x => x.Saat, new { @class = "form-control", @type = "time" })
+    <br />
+    <p>Teslim Eden</p>
+    @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control" })
+    <br />
+    <p>Teslim Alan</p>
+    @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Faturayı Güncelle</button>
+}
+

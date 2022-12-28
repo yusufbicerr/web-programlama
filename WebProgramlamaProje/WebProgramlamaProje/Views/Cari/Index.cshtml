@@ -1,0 +1,49 @@
+﻿@using WebProgramlamaProje.Models.Siniflar
+
+@model List<Cariler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2 style="color:darkred">Kayıtlı Cari Listesi Ve Cari İşlemleri</h2>
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+        <th>Mail Adresi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.CariAd</td>
+            <td>@x.CariSoyad</td>
+            <td>@x.CariSehir</td>
+            <td>@x.CariMail</td>
+            <td><a href="/Cari/CariSil/@x.CarilerID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Cari/CariGetir/@x.CarilerID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Cari/MusteriSatis/@x.CarilerID" class="btn btn-warning">Satış Geçmişi</a></td>
+        </tr>
+    }
+</table>
+<a href="/Cari/YeniCari/" class="btn btn-info">Yeni Cari Ekle</a>
+<p></p>
+@if (TempData["added"] != null)
+{
+    <strong style="color:green">@TempData["added"]</strong>
+}
+@if (TempData["deleted"] != null)
+{
+    <strong style="color:red">@TempData["deleted"]</strong>
+}
+@if (TempData["updated"] != null)
+{
+    <strong style="color:darkblue">@TempData["updated"]</strong>
+}

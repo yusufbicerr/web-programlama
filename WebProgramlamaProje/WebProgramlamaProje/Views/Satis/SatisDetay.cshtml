@@ -1,0 +1,38 @@
+﻿@using WebProgramlamaProje.Models.Siniflar
+@model List<SatisHareket>
+
+@{
+    ViewBag.Title = "SatisDetay";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Satış Detayı</h2>
+<br />
+<table class="table table-condensed">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Cari (Müşteri)</th>
+        <th>Ürün Markası</th>
+        <th>Personel</th>
+        <th>Adet</th>
+        <th>Birim Fiyat</th>
+        <th>Toplam Tutar</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Urun.UrunAd</td>
+            <td>@x.Cariler.CariAd @x.Cariler.CariSoyad</td>
+            <td>@x.Urun.Marka</td>
+            <td>@x.Personel.PersonelAd @x.Personel.PersonelSoyad</td>
+            <td>@x.Adet</td>
+            <td>@x.Fiyat</td>
+            <td>@x.ToplamTutar</td>
+            <td>@x.Tarih</td>
+        </tr>
+    }
+
+</table>
+<button class="btn btn-primary">Satış Yazdır</button>
+

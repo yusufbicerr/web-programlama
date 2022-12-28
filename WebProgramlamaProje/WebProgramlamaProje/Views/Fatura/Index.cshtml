@@ -1,0 +1,54 @@
+﻿@using WebProgramlamaProje.Models.Siniflar
+
+@model List<Faturalar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Faturalar</h2>
+<br />
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>Fatura Seri-Sıra No</th>
+        <th>Vergi Dairesi</th>
+        <th>Fatura Tarihi</th>
+        <th>İşlem Saati</th>
+        <th>Teslim Eden</th>
+        <th>Teslim Alan</th>
+        <th>Toplam Tutar</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var k in Model)
+    { 
+        <tr>
+            <td>
+                @k.FaturaSeriNo@k.FaturaSiraNo
+            </td>
+            <td>
+                @k.VergiDairesi
+            </td>
+            <td>
+                @Convert.ToDateTime(k.Tarih).ToString("dd/MM/yyyy")   
+            </td>
+            <td>
+                @k.Saat
+            </td>
+            <td>
+                @k.TeslimEden
+            </td>
+            <td>
+                @k.TeslimAlan
+            </td>
+            <td>
+                @k.ToplamTutar
+            </td>
+            <td><a href="/Fatura/FaturaGetir/@k.Faturalarid" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Fatura/FaturaDetay/@k.Faturalarid" class="btn btn-info">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Fatura/FaturaEkle" class="btn btn-info">Yeni Fatura Ekle</a>
+
