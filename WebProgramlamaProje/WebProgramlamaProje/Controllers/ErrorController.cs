@@ -4,7 +4,7 @@ namespace WebProgramlamaProje.Controllers
 {
     public class ErrorController : Controller
     {
-        public IActionResult Index()
+        public IActionResult PageError(int code)
         {
             return View();
         }

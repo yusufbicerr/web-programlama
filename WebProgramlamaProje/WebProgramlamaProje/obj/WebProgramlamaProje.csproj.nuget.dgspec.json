@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yusuf\\OneDrive\\Belgeler\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramlamaProje.csproj": {}
+    "C:\\Users\\Yasem\\Documents\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramlamaProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yusuf\\OneDrive\\Belgeler\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramlamaProje.csproj": {
+    "C:\\Users\\Yasem\\Documents\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramlamaProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yusuf\\OneDrive\\Belgeler\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramlamaProje.csproj",
+        "projectUniqueName": "C:\\Users\\Yasem\\Documents\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramlamaProje.csproj",
         "projectName": "WebProgramlamaProje",
-        "projectPath": "C:\\Users\\yusuf\\OneDrive\\Belgeler\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramlamaProje.csproj",
-        "packagesPath": "C:\\Users\\yusuf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yusuf\\OneDrive\\Belgeler\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\obj\\",
+        "projectPath": "C:\\Users\\Yasem\\Documents\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\WebProgramlamaProje.csproj",
+        "packagesPath": "C:\\Users\\Yasem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yasem\\Documents\\GitHub\\wep-programlama\\WebProgramlamaProje\\WebProgramlamaProje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yusuf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yasem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
