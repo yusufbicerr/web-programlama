@@ -1,0 +1,26 @@
+﻿@model WebProje2.Models.Siniflar.Cariler
+@{
+    ViewData["Title"] = "Partial1";
+    Layout = "~/Views/Login/Index.cshtml";
+}
+
+
+<div class="login-form login-form-left">
+    <div class="agile-row">
+        <h3>Cari Kayıt Formu</h3>
+        <div class="login-agileits-top">
+            <form method="post">
+                @Html.TextBoxFor(x => x.CariAd, new { @class = "form-control", @Placeholder = "Adınız", @required = "" })
+                @Html.TextBoxFor(x => x.CariSoyad, new { @class = "form-control", @Placeholder = "Soyadınız", @required = "" })
+                @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control", @Placeholder = "Şehir", @required = "" })
+                @Html.TextBoxFor(x => x.CariMail, new { @class = "form-control", @Placeholder = "Mail Adresi", @required = "" })
+                @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control", @Placeholder = "Şifre", @required = "", @type = "password" })
+                <div class="login-check">
+                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Kuralları Okudum <a href="#">&amp; Kabul Ediyorum.</a></label>
+                </div>
+                <input type="submit" value="Kayıt Ol">
+            </form>
+        </div>
+    </div>
+</div>
+

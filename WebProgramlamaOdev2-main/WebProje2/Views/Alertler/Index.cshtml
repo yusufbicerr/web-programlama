@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<br />
+<br />
+<button class="btn btn-primary" id="btn1">Buton1</button>
+<script>
+    $('#btn1').click(function () {
+        swal("Hello World!")
+    });
+</script>

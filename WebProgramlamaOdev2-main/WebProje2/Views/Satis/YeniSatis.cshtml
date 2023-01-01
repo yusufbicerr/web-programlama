@@ -1,0 +1,42 @@
+﻿@model WebProje2.Models.Siniflar.SatisHareket
+
+@{
+    ViewBag.Title = "YeniSatis";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Satış Yapma İşlemleri</h2>
+<br />
+<form class="form-group" method="post">
+    <p>Ürün Adı</p>
+    @Html.DropDownListFor(x => x.Urunid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    <br />
+    <p>Cari(Müşteri)</p>
+    @Html.DropDownListFor(x => x.CarilerID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    <br />
+    <p>Personel</p>
+    @Html.DropDownListFor(x => x.Personelid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+    <br />
+    <p>Adet</p>
+   <input type="number" class="form-control"max="10" min="1" placeholder="adet giriniz." name="Adet" id="txt1" onchange="sum();"/>
+    <br />
+    <p>Birim Fiyat</p>
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control",@id="txt2",@onkeyup="sum();" })
+    <br />
+    <p>Toplam Tutar</p>
+    @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control",@id="txt3"})
+    <br />
+    <button class="btn btn-primary">Ürünü Kaydet</button>
+</form>
+
+<script>
+    function sum() {
+        var sayi1 = document.getElementById('txt1').value;
+        var sayi2 = document.getElementById('txt2').value;
+        var sonuc = parseInt(sayi1) * parseInt(sayi2);
+        if (!isNaN(sonuc)) {
+            document.getElementById('txt3').value = sonuc;
+        }
+    }
+</script>

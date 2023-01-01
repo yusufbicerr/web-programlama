@@ -1,0 +1,35 @@
+﻿@model WebProje2.Models.Siniflar.Faturalar
+
+@{
+    ViewBag.Title = "FaturaEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2 style="color:darkred">Yeni Fatura Ekleme İşlemleri </h2>
+<form class="form-group" method="post">
+    <p style="color:green">Fatura Seri No </p>
+    @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
+    <br />
+    <p style="color:green">Fatura Sıra No </p>
+    @Html.TextBoxFor(x => x.FaturaSiraNo, new { @class = "form-control" })
+    <br />
+    <p style="color:green">Vergi Dairesi </p>
+    @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control" })
+    <br />
+    <p style="color:green">İşlem Tarihi </p>
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control",@type="date"})
+    <br />
+    <p style="color:green">İşlem Saati</p>
+    @Html.TextBoxFor(x => x.Saat, new { @class = "form-control", @type="time"})
+    <br />
+    <p style="color:green">Teslim Eden</p>
+    @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control" })
+    <br />
+    <p style="color:green">Teslim Alan</p>
+    @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control" })
+    <br />
+    <p style="color:green">Toplam Tutar</p>
+    @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Fatura Ekle</button>
+</form>

@@ -1,0 +1,33 @@
+﻿@model WebProje2.Models.Siniflar.Personel
+
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2 style="color:blue">Personel Bilgileri Güncelleme İşlemleri</h2>
+
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post,new {enctype="multipart/form-data"}))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.PersonelID)
+    <p>Personel Adı</p>
+    @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonelAd, "", new { @style = "color:red" })
+
+    <p></p>
+    <p>Personel Soyadı</p>
+    @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonelSoyad, "", new { @style = "color:red" })
+    <p></p>
+    <p>Personel Görseli</p>
+    <input type="file" name="PersonelGorsel" />
+    <p></p>
+    <p>Departman</p>
+    @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+</div>
+}
+

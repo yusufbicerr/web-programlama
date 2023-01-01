@@ -1,0 +1,69 @@
+﻿@using WebProje2.Models.Siniflar
+@model List<Urun>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Ürünlerimiz</h2>
+<br />
+@using (Html.BeginForm("Index", "Urun", FormMethod.Get))
+{
+    <p>
+        Ürün Adı : @Html.TextBox("search")
+        <input type="submit" value="Ara" />
+    </p>
+}
+<p></p>
+@if (TempData["added"] != null)
+{
+    <strong style="color:green">@TempData["added"]</strong>
+}
+@if (TempData["deleted"] != null)
+{
+    <strong style="color:red">@TempData["deleted"]</strong>
+}
+@if (TempData["updated"] != null)
+{
+    <strong style="color:darkblue">@TempData["updated"]</strong>
+}
+<p></p>
+<table class="table table-bordered">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Ürün Kategorisi</th>
+        <th>Ürün Markası</th>
+        <th>Stok Sayısı</th>
+        <th>Alış Fiyatı</th>
+        <th>Satış Fiyatı</th>
+        <th>Ürün Görseli</th>
+        <th>Ürünü Sil</th>
+        <th>Ürünü Güncelle</th>
+        <th>Satış Yap</th>
+    </tr>
+    @foreach (var urun in Model)
+    {
+        <tr>
+            <td>@urun.UrunAd</td>
+            <td>@urun.Kategori.KategoriAd</td>
+            <td>@urun.Marka</td>
+            <td>@urun.Stok</td>
+            <td>@urun.AlisFiyat ₺</td>
+            <td>@urun.SatisFiyat ₺</td>
+            <td><img src="@urun.UrunGorsel" style="width:100px;height:100px;" /></td>
+            <td>
+                <a href="/Urun/UrunSil/@urun.UrunID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Urun/UrunGetir/@urun.UrunID" class="btn btn-warning">Güncelle</a>
+            </td>
+            <td>
+                <a href="/Satis/YeniSatis" class="btn btn-success">Satış Yap</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Urun/YeniUrun/" class="btn btn-info">Yeni Ürün</a>
+
+

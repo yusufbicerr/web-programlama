@@ -1,0 +1,27 @@
+﻿@using WebProje2.Models.Siniflar
+
+@model List<KargoDetay>
+
+@{
+    ViewData["Title"] = "KargoDetayEN";
+    Layout = "~/Views/Shared/_CariLayoutEN.cshtml";
+}
+
+<br />
+<h2 style="color:darkred">Cargo Details</h2>
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Situation</th>
+        <th>Date</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Aciklama</td>
+            <td>@x.Tarih</td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/CariPanel/KargoTakipEN/?search=@ViewBag.takipkodu">Go Back</a>

@@ -1,0 +1,44 @@
+﻿@using WebProje2.Models.Siniflar
+
+@model List<SatisHareket>
+
+
+@{
+    ViewData["Title"] = "MusteriSatis";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Cari Satış İşlem Geçmişi</h2>
+
+<br />
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active" style="color:blueviolet">İlgili Cari & Müşteri : @ViewBag.musteri</li>
+</ol>
+<table class="table table-condensed">
+    <tr>
+        <th>Satış ID</th>
+        <th>Ürün Adı</th>
+        <th>Personel Adı</th>
+        <th>Birim Fiyat</th>
+        <th>Adet</th>
+        <th>Net Tutar</th>
+        <th>Satış Tarihi</th>
+        <th>Yazdır</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Satisid</td>
+            <td>@x.Urun.UrunAd</td>
+            <td>@x.Personel.PersonelAd @x.Personel.PersonelSoyad</td>
+            <td>@x.Fiyat</td>
+            <td>@x.Adet</td>
+            <td>@x.ToplamTutar</td>
+            <td>@x.Tarih</td>
+            <td><a href="#" class="btn btn-secondary">Yazdır</a></td>
+        </tr>
+    }
+
+</table>
+
+

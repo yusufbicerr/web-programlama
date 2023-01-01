@@ -1,0 +1,19 @@
+﻿@model WebProje2.Models.Siniflar.Kategori
+
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Kategori Güncelleme İşlemleri</h2>
+<br />
+@using (Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post)) 
+{ 
+<div class="form-group">
+    <p>Kategori Adı </p>
+    @Html.TextBoxFor(x => x.KategoriAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.KategoriAd, "", new { @style = "color:red" })
+    @Html.HiddenFor(x => x.KategoriID)
+</div>
+    <button class="btn btn-warning">Güncelle</button>
+}

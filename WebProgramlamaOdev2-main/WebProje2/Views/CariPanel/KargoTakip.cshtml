@@ -1,0 +1,45 @@
+﻿@using WebProje2.Models.Siniflar
+
+@model List<KargoDetay>
+@{
+    ViewData["Title"] = "KargoTakip";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("KargoTakip", "CariPanel", FormMethod.Get))
+{
+    <p>
+        Takip Kodu : @Html.TextBox("search")
+        <input type="submit" value="Ara" />
+    </p>
+}
+<br />
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>Takip Kodu</th>
+        <th>Personel</th>
+        <th>Alıcı</th>
+        <th>Tarih</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>
+                @k.TakipKodu
+            </td>
+            <td>
+                @k.Personel
+            </td>
+            <td>
+                @k.Alici
+            </td>
+            <td>
+                @k.Tarih.ToString("dd/MM/yyyy")
+            </td>
+            <td><a href="/CariPanel/KargoDetay/@k.TakipKodu" class="btn btn-success">Detaylar</a></td>
+        </tr>
+    }
+</table>
+

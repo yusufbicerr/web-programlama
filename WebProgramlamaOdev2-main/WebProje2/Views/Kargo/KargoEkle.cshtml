@@ -1,0 +1,33 @@
+﻿@model WebProje2.Models.Siniflar.KargoDetay
+
+@{
+    ViewBag.Title = "DepartmanEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Kargo Bilgisi Ekleme İşlemleri</h2>
+<br />
+<form class="form-group" method="post">
+    <p style="color:green">Takip Kodu </p>
+    <input type="text" value="@ViewBag.takipkod" name="TakipKodu" class="form-control" readonly style="color:red" />
+    <br />
+    <p style="color:green">Personel</p>
+    @Html.TextBoxFor(x => x.Personel, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Personel, "", new { @style = "color:red" })
+    <br />
+    <p style="color:green">Alıcı </p>
+    @Html.TextBoxFor(x => x.Alici, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Alici, "", new { @style = "color:red" })
+    <br />
+    <p style="color:green">Tarih </p>
+    <input class="form-control" type="date" name="Tarih" />
+    @Html.ValidationMessageFor(x => x.Tarih, "", new { @style = "color:red" })
+    <br />
+    <p style="color:green">Açıklama </p>
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Aciklama, "", new { @style = "color:red" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

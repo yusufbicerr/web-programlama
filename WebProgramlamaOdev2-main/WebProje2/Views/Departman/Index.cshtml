@@ -1,0 +1,45 @@
+﻿@using WebProje2.Models.Siniflar
+
+@model List<Departman>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Departmanlar</h2>
+<br />
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>Departman Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detayları Görüntüle</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>
+                @k.DepartmanAd
+            </td>
+            <td><a href="/Departman/DepartmanSil/@k.Departmanid" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Departman/DepartmanGetir/@k.Departmanid" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Departman/DepartmanDetay/@k.Departmanid" class="btn btn-warning" style="color:white">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Departman/DepartmanEkle" class="btn btn-info">Departman Ekle</a>
+<p></p>
+@if (TempData["added"] != null)
+{
+    <strong style="color:darkgreen">@TempData["added"]</strong>
+}
+@if (TempData["deleted"] != null)
+{
+    <strong style="color:red">@TempData["deleted"]</strong>
+}
+@if (TempData["updated"] != null)
+{
+    <strong style="color:darkblue">@TempData["updated"]</strong>
+}
+

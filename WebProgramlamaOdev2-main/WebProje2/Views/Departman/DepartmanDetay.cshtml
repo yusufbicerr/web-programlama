@@ -1,0 +1,33 @@
+﻿@using WebProje2.Models.Siniflar
+@model List<Personel>
+
+@{
+    ViewBag.Title = "DepartmanDetay";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>Departman Detay Sayfası</h2>
+<br />
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active" style="color:blueviolet">İlgili Departman : @ViewBag.depAdi</li>
+</ol>
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>Personel ID</th>
+        <th>Personel Adı</th>
+        <th>Personel Soyadı</th>
+        <th>Satışlar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.PersonelID</td>
+            <td>@x.PersonelAd</td>
+            <td>@x.PersonelSoyad</td>
+            <td><a href="/Departman/DepartmanPersonelSatis/@x.PersonelID" class="btn btn-primary">Satışlar</a></td>
+        </tr>
+    }
+
+
+</table>

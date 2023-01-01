@@ -1,0 +1,47 @@
+﻿@using WebProje2.Models.Siniflar
+
+@model List<Personel>
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2 style="color:darkred">Personeller</h2>
+<br />
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+        <th>Personel ID</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Görsel</th>
+        <th>Departman</th>
+        <th>Güncelle</th>
+        <th>Satışlar</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>
+                @k.PersonelID
+            </td>
+
+            <td>
+                @k.PersonelAd
+            </td>
+            <td>
+                @k.PersonelSoyad
+            </td>
+            <td>
+                <img src="@k.PersonelGorsel" style="width:100px;height:100px;"/>
+            </td>
+            <td>
+                @k.Departman.DepartmanAd
+            </td>
+            @*<td><a href="/Personel/DepartmanSil/@k.Departmanid" class="btn btn-danger">Sil</a></td>*@
+            <td><a href="/Personel/PersonelGetir/@k.PersonelID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Departman/DepartmanPersonelSatis/@k.PersonelID" class="btn btn-warning" style="color:black">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Personel/PersonelEkle" class="btn btn-info">Personel Ekle</a>

@@ -1,0 +1,15 @@
+﻿@model WebProje2.Models.Siniflar.Kategori
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Kategori Ekleme İşlemleri</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.TextBoxFor(x => x.KategoriAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.KategoriAd, "", new { @style = "color:red" })
+    <br />
+    <button class="btn btn-info" id="btn1">Kaydet</button>
+</form>

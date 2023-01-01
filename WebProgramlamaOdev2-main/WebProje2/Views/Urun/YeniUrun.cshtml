@@ -1,0 +1,45 @@
+﻿@model WebProje2.Models.Siniflar.Urun
+
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Ürün Ekleme İşlemleri</h2>
+<br />
+<form class="form-group" method="post">
+    <p>Ürün Adı</p>
+    @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.UrunAd, "", new { @style = "color:red" })
+
+    <br />
+    <p>Ürün Kategorisi</p>
+    @Html.DropDownListFor(x => x.Kategoriid, (List<SelectListItem>)ViewBag.ktg1, new { @class = "form-control" })
+    <br />
+    <p>Ürün Markası</p>
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Marka, "", new { @style = "color:red" })
+
+    <br />
+    <p>Ürün Stok Sayısı</p>
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Stok, "", new { @style = "color:red" })
+
+    <br />
+    <p>Alış Fiyatı</p>
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.AlisFiyat, "", new { @style = "color:red" })
+
+    <br />
+    <p>Satış Fiyatı</p>
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SatisFiyat, "", new { @style = "color:red" })
+
+    <br />
+    <p>Ürün Görseli</p>
+    @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Ürünü Kaydet</button>
+</form>
+

@@ -1,0 +1,19 @@
+﻿@model WebProje2.Models.Siniflar.Departman
+
+@{
+    ViewBag.Title = "DepartmanEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Departman Ekleme İşlemleri</h2>
+<br />
+<form class="form-group" method="post">
+    <p style="color:green">Departman Adı </p>
+    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.DepartmanAd, "", new { @style = "color:red" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
+

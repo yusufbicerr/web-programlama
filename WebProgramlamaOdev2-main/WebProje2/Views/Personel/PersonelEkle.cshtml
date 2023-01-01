@@ -1,0 +1,31 @@
+﻿@model WebProje2.Models.Siniflar.AddProfileImage
+
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2 style="color:darkred">Yeni Personel Ekleme İşlemleri </h2>
+@using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<form class="form-group" method="post">
+    <p style="color:green">Personel Adı </p>
+    @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonelAd, "", new { @style = "color:red" })
+    <br />
+    <p style="color:green">Personel Soyadı </p>
+    @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PersonelSoyad, "", new { @style = "color:red" })
+
+    <br />
+    <p style="color:green">Personel Görseli </p>
+    <input type="file" name="PersonelGorsel" />
+    <br />
+    <p style="color:green">Personel Departmanı </p>
+    @Html.ValidationMessageFor(x => x.Departmanid, "", new { @style = "color:red" })
+    @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info">Personel Ekle</button>
+</form>
+}

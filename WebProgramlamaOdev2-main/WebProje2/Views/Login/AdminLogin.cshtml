@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "AdminLogin";
+    Layout = "~/Views/Shared/SeceneklerLayout.cshtml";
+}
+
+<div class="login-form login-form-left">
+    <div class="agile-row">
+        <br />
+        <br />
+        <h3 style="color: white;margin-top: 0rem; margin-left: 6rem; text-align: center; display: flex; justify-content: center">Personel Sistemi V1.1</h3>
+        <span class="fa fa-lock"></span>
+        <div class="clear"></div>
+        <div class="login-agileits-top">
+            <form method="post" style="margin-left: 0.25rem">
+                <input type="text" class="name" name="KullaniciAd" Placeholder="Kullanıcı Adı" required="" />
+                <input type="password" class="password" name="Sifre" Placeholder="Şifre" required="" />
+                <input type="submit" value="Geri Dön" style="margin-bottom:10px" onclick="window.location.href = '/Login';">
+                <input type="submit" value="Giriş Yap">
+            </form>
+        </div>
+        <div>
+            <p style="color:red;font-size:large;margin-top:10px">@TempData["LoginError"]</p>
+        </div>
+    </div>
+</div>
+

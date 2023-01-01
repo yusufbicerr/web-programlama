@@ -1,0 +1,27 @@
+﻿@using WebProje2.Models.Siniflar
+
+@model List<KargoDetay>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2 style="color:darkred">Kargo Detayları</h2>
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Açıklama</th>
+        <th>Tarih</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Aciklama</td>
+            <td>@x.Tarih</td>
+        </tr>
+    }
+</table>
+

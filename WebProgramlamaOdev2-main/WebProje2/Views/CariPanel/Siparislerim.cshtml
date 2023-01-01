@@ -1,0 +1,29 @@
+﻿@using WebProje2.Models.Siniflar;
+@model List<SatisHareket>
+@{
+    ViewData["Title"] = "Siparislerim";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+<br />
+<h1>Sipariş Geçmişim</h1>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Adet</th>
+        <th>Toplam Tutar</th>
+        <th>Teslim Eden</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Urun.UrunAd</td>
+            <td>@x.Adet</td>
+            <td>@x.ToplamTutar</td>
+            <td>@x.Personel.PersonelAd @x.Personel.PersonelSoyad</td>
+            <td>@Convert.ToDateTime(x.Tarih).ToString("dd/MM/yyyy")</td>
+        </tr>
+
+    }
+</table>
